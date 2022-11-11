@@ -3,8 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApiController;
 
-Route::get('/api', [ApiController::class, 'runApi']);
+Route::get('/ApiController', [ApiController::class, 'runApi']);
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/api', [ApiController::class, 'apiBlade']);
+
+Route::get('/', function (){
+    return view('api');
 });
